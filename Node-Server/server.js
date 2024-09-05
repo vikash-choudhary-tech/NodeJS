@@ -1,8 +1,4 @@
-const http = require("node:http");
-const fs = require("node:fs");
 const express = require("express");
-const bodyParser = require("body-parser");
-const path = require("node:path");
 const router = require("./routes/router");
 const { engine } = require("express-handlebars");
 

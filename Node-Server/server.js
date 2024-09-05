@@ -4,8 +4,13 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const path = require("node:path");
 const router = require("./routes/router");
+const { engine } = require("express-handlebars");
 
 const app = express();
+
+app.engine("handlebars", engine());
+app.set("view engine", "handlebars");
+app.set("views", "./views");
 
 app.use(router);
 

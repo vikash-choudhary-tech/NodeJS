@@ -6,4 +6,8 @@ router.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "../test.html"));
 });
 
+router.get("/handlebars", (req, res) => {
+  res.render("home");
+});
+
 module.exports = router;
